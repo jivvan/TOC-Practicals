@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char transition(int state, char input)
+int transition(int state, char input)
 {
     int tMatrix[][3] = {
         //{'STATE', 'INPUT-a', 'INPUT-b'}
