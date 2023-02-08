@@ -5,7 +5,7 @@
 int transition(int state, char input)
 {
     int tMatrix[][3] = {
-        //{'STATE', 'INPUT-0', 'INPUT-1'}
+        //{'INPUT-0', 'INPUT-1'}
         {0, 1},
         {0, 2},
         {0, 2},
