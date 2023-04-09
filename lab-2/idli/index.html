@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iyerifier</title>
+  </head>
+  <body>
+    <br />
+    <label for="voice-select">Select Voice</label>
+    <select name="voice-select" id="voice-select"></select>
+    <br />
+    <br />
+    <br />
+    <label for="Text to Speech">Enter text to iyerify:</label>
+    <br />
+    <br />
+    <textarea name="text" id="text" cols="60" rows="10">
+Prabhakarna Sripalawardhana Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli Yekya Parampeel Parambatur Chinnaswami Muthuswami Venugopal Iyer</textarea
+    >
+    <button onclick="iyerify()">Speak</button>
+    <br />
+    <label for="speed">Speed:</label>
+    <input min="0" max="1" step="0.1" id="speed" type="range" />
+    <br />
+    <br />
+    <div id="output"></div>
+    <script src="iyer.js"></script>
+  </body>
+</html>
