@@ -17,17 +17,21 @@ int transition(int state, char input)
     exit(1);
 }
 
-void main()
+int main()
 {
     char str[100];
     const int finalState = 2;
-    int currentState = 0;
-    printf("Enter any string of alphabet {0,1}\n");
-    scanf("%s", str);
-    for (int i = 0; str[i] != '\0'; i++)
-        currentState = transition(currentState, str[i]);
-    if (currentState == finalState)
-        printf("Accepted\n");
-    else
-        printf("Rejected\n");
+    while (1)
+    {
+        int currentState = 0;
+        printf("Enter any string of alphabet {0,1}\n");
+        scanf("%s", str);
+        for (int i = 0; str[i] != '\0'; i++)
+            currentState = transition(currentState, str[i]);
+        if (currentState == finalState)
+            printf("Accepted\n");
+        else
+            printf("Rejected\n");
+    }
+    return 0;
 }

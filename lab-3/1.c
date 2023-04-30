@@ -38,19 +38,22 @@ int isIdentifier(char string[])
 int main()
 {
     char string[50];
-    printf("Enter string to evaluate: ");
-    scanf("%s", &string);
-    if (isKeyword(string))
+    while (1)
     {
-        printf("%s is a keyword!", string);
-    }
-    else if (isIdentifier(string))
-    {
-        printf("%s is a valid identifier!\n", string);
-    }
-    else
-    {
-        printf("%s is neither a keyword nor a valid identifier!", string);
+        printf("Enter string to evaluate: ");
+        scanf("%s", &string);
+        if (isKeyword(string))
+        {
+            printf("%s is a keyword!\n", string);
+        }
+        else if (isIdentifier(string))
+        {
+            printf("%s is a valid identifier!\n", string);
+        }
+        else
+        {
+            printf("%s is neither a keyword nor a valid identifier!\n", string);
+        }
     }
     return 0;
 }

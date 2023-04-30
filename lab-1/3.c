@@ -28,16 +28,20 @@ int isAcceptable(int currentState)
     return 0;
 }
 
-void main()
+int main()
 {
     char str[100];
-    int currentState = 0;
-    printf("Enter any string of alphabet {a,b}\n");
-    scanf("%s", str);
-    for (int i = 0; str[i] != '\0'; i++)
-        currentState = transition(currentState, str[i]);
-    if (isAcceptable(currentState))
-        printf("Accepted\n");
-    else
-        printf("Rejected\n");
+    while (1)
+    {
+        int currentState = 0;
+        printf("Enter any string of alphabet {a,b}\n");
+        scanf("%s", str);
+        for (int i = 0; str[i] != '\0'; i++)
+            currentState = transition(currentState, str[i]);
+        if (isAcceptable(currentState))
+            printf("Accepted\n");
+        else
+            printf("Rejected\n");
+    }
+    return 0;
 }
